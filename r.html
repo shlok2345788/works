@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html,
+html.active {
+    transition: overflow 1s
+}
+
+.headset,
+h2,
+html {
+    width: 100%
+}
+
+.devices-wrapper,
+.nav-secondary,
+nav {
+    box-sizing: border-box
+}
+
+.white,
+nav {
+    z-index: 1000
+}
+
+.nav-item,
+p {
+    letter-spacing: .2px
+}
+
+.one,
+.three,
+.three::after,
+.two {
+    content: ''
+}
+
+.background,
+.image,
+.item,
+html.active {
+    overflow: hidden
+}
+
+@font-face {
+    font-family: appleSemibold;
+    src: url(fonts/apple/SF-Pro-Display-Semibold.otf)
+}
+
+@font-face {
+    font-family: appleBold;
+    src: url(fonts/apple/SF-Pro-Display-Bold.otf)
+}
+
+@font-face {
+    font-family: appleHeavy;
+    src: url(fonts/apple/SF-Pro-Display-Heavy.otf)
+}
+
+@font-face {
+    font-family: appleLight;
+    src: url(fonts/apple/SF-Pro-Text-Light.otf)
+}
+
+@font-face {
+    font-family: appleMedium;
+    src: url(fonts/apple/SF-Pro-Display-Medium.otf)
+}
+
+@font-face {
+    font-family: appleRegular;
+    src: url(fonts/apple/SF-Pro-Display-Regular.otf)
+}
+
+.owl-carousel .owl-video-tn {
+    min-height: 685px
+}
+
+model-viewer {
+    width: auto;
+    height: 450px;
+    border-radius: 9px
+}
+
+button.btn-thumb {
+    padding: 0;
+    width: 32%;
+    height: 50%;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    margin-top: 2em
+}
+
+img.img-thumb {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px
+}
+
+model-viewer#model_view:focus {
+    outline: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2)
+}
+
+.cstm-wdt {
+    width: 24%!important
+}
+
+.cstm-wdt .active {
+    width: 25%!important
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background-color: #eee;
+    user-select: none
+}
+
+.background {
+    background-image: url(images/hero.png);
+    height: 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    margin: 0 auto
+}
+
+.event-projects,
+.partner-projects,
+.research-projects,
+.training-projects {
+    background-size: cover;
+    background-position: center
+}
+
+.hero-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.partner-projects {
+    background-image: url(images/Partner_Projects/partner_hero.png)
+}
+
+.event-projects {
+    background-image: url(images/Events/events_hero.jpg)
+}
+
+.research-projects {
+    background-image: url(images/R&D/r&d_hero.jpg)
+}
+
+.training-projects {
+    background-image: url(images/Training/training_hero.jpg)
+}
+
+.hidden-content {
+    visibility: visible
+}
+
+.down-mouse,
+.hidden-content.active {
+    visibility: hidden
+}
+
+.headset {
+    position: absolute;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 30px;
+    opacity: 0
+}
+
+.induction,
+.induction2 {
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    box-shadow: 1px 1px 120px 0 rgba(82, 81, 81, .2)
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-family: appleHeavy;
+    font-size: 36px
+}
+
+h4,
+p {
+    font-family: appleLight, sans-serif
+}
+
+p {
+    color: #c2c2c2;
+    line-height: 26px
+}
+
+.nav-item,
+a {
+    color: #000;
+    text-decoration: none
+}
+
+.induction {
+    background-image: url(images/induction.jpg)
+}
+
+.induction2 {
+    background-image: url(images/induction2.jpg)
+}
+
+.navbar,
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px
+}
+
+.navbar {
+    margin-right: 20px
+}
+
+nav {
+    top: 0;
+    left: 0;
+    transition: .3s
+}
+
+.white {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 1px 1px 120px rgba(218, 211, 211, 0);
+    transition: background 2s
+}
+
+.white.active {
+    background: #000;
+    transition: background .2s
+}
+
+.logo {
+    position: relative;
+    float: left;
+    margin: 20px;
+    padding: 30px;
+    width: 200px;
+    transition: background 1s
+}
+
+.logoimg,
+.logoimgwhite {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 20px;
+    opacity: 0;
+    transition: opacity .4s
+}
+
+.logoimg.active,
+.logoimgwhite.active {
+    opacity: 1;
+    transition: opacity .4s
+}
+
+.one,
+.two {
+    transition: .5s;
+    border-radius: 20px
+}
+
+.nav-menu {
+    position: relative;
+    float: right;
+    display: block;
+    margin-top: 20px
+}
+
+.close,
+.ham-menu,
+.one,
+.open,
+.three,
+.three::after,
+.two {
+    position: absolute
+}
+
+.work {
+    margin-top: -30px
+}
+
+.nav-item .active {
+    opacity: 1!important
+}
+
+.nav-item {
+    padding: 15px 40px 15px 15px;
+    font-size: 18px;
+    font-family: appleBold;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(223, 221, 221, .144);
+    display: inline-block
+}
+
+.nav-item a {
+    opacity: .3
+}
+
+.ham-menu {
+    right: 20px;
+    top: 20px;
+    padding: 30px 45px;
+    cursor: pointer
+}
+
+.one,
+.three,
+.two {
+    background: #000;
+    height: 2px
+}
+
+.one {
+    width: 30px;
+    top: 20px
+}
+
+.two {
+    width: 20px;
+    top: 30px;
+    right: 10px
+}
+
+.three {
+    width: 12px;
+    top: 40px;
+    right: 25px;
+    border-radius: 20px;
+    transition: .5s
+}
+
+.one.active,
+.three.active,
+.three::after,
+.two.active {
+    border-radius: 0;
+    transition: .5s
+}
+
+.one.active {
+    width: 26px;
+    top: 31px;
+    background: #fff;
+    transform: rotate(50deg) skew(-35deg)
+}
+
+.two.active {
+    width: 14px;
+    top: 36px;
+    left: 46px;
+    background: #fff;
+    transform: rotate(-50deg) skew(35deg)
+}
+
+.three.active {
+    width: 5px;
+    top: 23px;
+    right: 22px;
+    background: #fff;
+    transform: rotate(-50deg) skew(45deg)
+}
+
+.three::after {
+    right: 3px;
+    width: 100%;
+    height: 100%;
+    transform: skew(-45deg);
+    background: 0 0;
+    z-index: -2
+}
+
+.close,
+.open {
+    top: 22px;
+    right: 20px;
+    font-family: tallFont;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity .4s
+}
+
+.nav-primary a,
+.nav-secondary a {
+    font-family: appleBold;
+    letter-spacing: .6px
+}
+
+.close.active,
+.open.active {
+    opacity: 1;
+    transition: opacity .4s
+}
+
+.full-menu,
+.full-menu.active {
+    transition: height .7s ease-in-out
+}
+
+.ham-menu img {
+    width: 30px
+}
+
+.full-menu {
+    background-color: #000;
+    position: fixed;
+    height: 0;
+    width: 100%;
+    z-index: 1000
+}
+
+.full-menu.active {
+    height: 100%
+}
+
+.nav-wrapper {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 200px 0;
+    pointer-events: none
+}
+
+.nav-primary,
+.nav-secondary {
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+    cursor: default
+}
+
+.nav-primary {
+    float: left;
+    opacity: 0;
+    transition: opacity .4s
+}
+
+.nav-primary ul li {
+    margin: 30px;
+    list-style: none
+}
+
+.nav-primary a {
+    color: #3f3939;
+    font-size: 40px;
+    transition: color .4s;
+    transition: font-size .4s
+}
+
+.nav-primary.active {
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 1;
+    transition: opacity 3s
+}
+
+.nav-primary a:hover {
+    color: #fff;
+    font-size: 50px;
+    transition: color .4s;
+    transition: font-size .4s
+}
+
+.nav-secondary {
+    float: right;
+    border-left: 1px solid #201919;
+    height: 340px;
+    letter-spacing: .6px;
+    opacity: 0;
+    transition: opacity .4s
+}
+
+.nav-secondary.active {
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 1;
+    transition: opacity 3s
+}
+
+.nav-secondary ul li {
+    margin: 20px 50px;
+    list-style: none
+}
+
+.nav-secondary a {
+    color: #3f3939;
+    font-size: 40px;
+    transition: color .4s;
+    transition: font-size .4s
+}
+
+.nav-secondary a:hover {
+    color: #fff;
+    font-size: 50px;
+    transition: color .4s;
+    transition: font-size .4s
+}
+
+.nav-secondary img {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px
+}
+
+.description {
+    left: 28%;
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    max-width: 900px;
+    line-height: 1.42857143;
+    font-family: gothamLight;
+    font-size: 24px;
+    text-transform: initial;
+    animation: fadein 3s
+}
+
+.content,
+.description-card a,
+.device,
+.submit,
+.team-member-name-holder p {
+    text-transform: uppercase
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.work-section {
+    height: auto;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 65px
+}
+
+.work-container {
+    max-width: 1080px;
+    margin: 0 auto
+}
+
+.common-project,
+.projects .last-project {
+    margin-bottom: 0
+}
+
+.work-image {
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    box-shadow: 1px 1px 120px 0 rgba(82, 81, 81, .2)
+}
+
+.work-description {
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    pointer-events: none
+}
+
+.common-project {
+    height: 900px;
+    margin-top: 40px
+}
+
+.partner-project {
+    height: 700px
+}
+
+.description-card {
+    float: right;
+    display: block;
+    padding: 50px;
+    width: 400px;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-top: -120px;
+    margin-right: -40px;
+    box-shadow: 1px 1px 120px 0 rgba(0, 0, 0, .14)
+}
+
+.description-card h3,
+.device-description-card h3 {
+    font-family: appleHeavy;
+    font-size: 28px;
+    margin-top: 0;
+    letter-spacing: 1px
+}
+
+.description-card p,
+.device-description-card p {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 0
+}
+
+.description-card a {
+    display: block;
+    text-decoration: none;
+    text-align: justify;
+    color: #6676ca;
+    font-family: GothamLight;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px
+}
+
+.about-title,
+.content,
+.device,
+.hero-title,
+.partner-subtitle,
+.submit,
+.view-more-hyperlink,
+.work-title {
+    text-align: center
+}
+
+.company-logo {
+    width: auto;
+    height: 75px;
+    margin-bottom: 20px
+}
+
+.birla-image {
+    background-image: url(images/induction.jpg)
+}
+
+.hindalco-image {
+    background-image: url(images/hindalco.jpg)
+}
+
+.elmach-image {
+    background-image: url(images/elmach1.png)
+}
+
+.isro-terrain-image {
+    background-image: url(images/isro_experience.jpg)
+}
+
+.isro-mars-image {
+    background-image: url(images/isro_mars.jpg)
+}
+
+.dark {
+    background: #161515;
+    padding-top: 1px
+}
+
+.dark h3 {
+    color: #fff
+}
+
+.dark p {
+    color: #c9c2c2
+}
+
+.dark .owl-thumb-item:focus img {
+    box-shadow: 12px 16px 80px rgba(0, 0, 0, 1);
+    transition: .4s
+}
+
+.devices-section {
+    width: 100%;
+    background-color: #f8f8f8;
+    min-height: 300px;
+    padding: 40px 0
+}
+
+.devices-container {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column
+}
+
+.devices-title {
+    margin-bottom: 30px;
+    font-weight: 100
+}
+
+.device-description-card {
+    display: block;
+    padding: 50px;
+    width: 30%;
+    border-radius: 6px;
+    background-color: #fff
+}
+
+.devices-hero {
+    background-color: #fff
+}
+
+.card-left {
+    float: left
+}
+
+.card-right {
+    float: right
+}
+
+.device-description-card img {
+    width: 80px
+}
+
+.devices-spacer {
+    width: 60px;
+    height: 1px;
+    background: #b4b4b4;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+
+.device-image,
+.device-image-equal {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block
+}
+
+.device-image {
+    height: 400px;
+    width: 60%;
+    margin-bottom: 30px
+}
+
+.device-image-equal,
+.parent-left {
+    height: 450px;
+    box-sizing: border-box
+}
+
+.device-image-equal {
+    background-position: center;
+    width: 100%;
+    border-radius: 6px;
+    transition: box-shadow .6s
+}
+
+.device-image-equal:hover {
+    box-shadow: 1px 1px 120px 0 rgba(0, 0, 0, .14);
+    transition: box-shadow .6s
+}
+
+.parent-left {
+    position: relative;
+    padding: 20px 10px 20px 20px;
+    width: 50%
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    background: #000;
+    padding: 20px 10px;
+    color: #fff;
+    font-family: appleRegular, sans-serif;
+    letter-spacing: 6px;
+    margin-bottom: -20px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: block;
+    opacity: 0;
+    transition: opacity .5s
+}
+
+.devices-hero,
+.devices-small-container {
+    background: 0 0;
+    border-radius: 6px;
+    position: relative;
+    box-sizing: border-box;
+    height: 450px;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.devices-small .device-image-equal,
+.devices-small-container {
+    height: 200px
+}
+
+.devices-small {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 200px;
+    width: 33%;
+    position: relative
+}
+
+.devices-hero .content,
+.devices-small .content {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 6px;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-bottom: 0;
+    line-height: 25px;
+    opacity: 0
+}
+
+.devices-hero:hover .content,
+.devices-small:hover .content,
+.parent-left:hover .content,
+.parent-right:hover .content {
+    opacity: 1;
+    transition: opacity .5s
+}
+
+.right-content {
+    margin-left: auto!important;
+    margin-right: 0;
+    width: 360px;
+    right: 0;
+    border-radius: 6px 0!important
+}
+
+.parent-right {
+    position: relative;
+    padding: 20px 20px 20px 10px;
+    box-sizing: border-box;
+    height: 450px;
+    width: 50%
+}
+
+.device-vive {
+    background-image: url(images/Devices/devices_vive.jpg)
+}
+
+.device-vive-pro {
+    background-image: url(images/Devices/devices_vive_pro.jpg), linear-gradient(to right, #02a2f8 0, #2a7899 50%, #313b4d 75%, #23c5b3 100%);
+    filter: blur(50%)
+}
+
+.device-oculus-go {
+    background-image: url(images/Devices/devices_oculus_go.jpg)
+}
+
+.device-oculus-rift {
+    background-image: url(images/Devices/devices_oculus_rift.jpg)
+}
+
+.device-hololens {
+    background-image: url(images/Devices/devices_hololens.jpg)
+}
+
+.device-arcore {
+    background-image: url(images/Devices/devices_arcore.jpg)
+}
+
+.device-arkit,
+.device-vuforia {
+    background-image: url(images/Devices/devices_arkit.jpg)
+}
+
+.clearfix {
+    clear: both
+}
+
+.device-right-padding {
+    padding-right: 10px
+}
+
+.devices-holder {
+    width: 100%;
+    display: block
+}
+
+.device {
+    width: 24%;
+    display: inline-block;
+    font-family: gothamBook, sans-serif;
+    letter-spacing: .5px
+}
+
+.device img {
+    width: 150px;
+    margin: 5px 5px 5px 0
+}
+
+.devices-logo {
+    background: #fff;
+    height: 120px;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 120px 0 rgba(87, 83, 83, .2)
+}
+
+.devices-logo ul {
+    display: flex;
+    justify-content: center
+}
+
+.devices-logo ul li {
+    list-style: none;
+    display: inline-block
+}
+
+.devices-logo ul li a img {
+    width: auto;
+    height: 50px;
+    margin-right: 30px
+}
+
+.about-section-bg {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: none
+}
+
+.about-section,
+.about-section-wrapper {
+    height: 380px;
+    width: 100%;
+    background: #000;
+    transition: all 1s ease-in-out
+}
+
+.about-section.active {
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in-out
+}
+
+.about-us-more {
+    font-size: 60px!important;
+    margin-left: 40px;
+    margin-top: 0;
+    color: #fff;
+    cursor: pointer;
+    transition: .4s
+}
+
+.about-us-more:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #f6d365, #fda085);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .4s
+}
+
+.hero-title {
+    font-size: 2.5em;
+    padding-top: 150px;
+    font-family: appleMedium, sans-serif;
+    padding-left: 40px;
+    line-height: 1.2;
+    width: 1000px;
+    margin: 0 auto
+}
+
+.hero-title br {
+    display: none
+}
+
+.large-title {
+    font-family: appleBold, sans-serif;
+    font-size: 60px;
+    max-width: 1080px;
+    margin: 0 auto
+}
+
+.partner-subtitle {
+    font-family: appleMedium, sans-serif;
+    color: #757575;
+    font-size: 22px;
+    max-width: 1000px;
+    padding: 20px;
+    line-height: 30px;
+    margin: 0 auto
+}
+
+.test {
+    background: red;
+    height: 300px;
+    width: 100%
+}
+
+.hyperlink {
+    color: #636363;
+    text-decoration: none;
+    transition: all .3s
+}
+
+.dark-hyperlink {
+    color: #c9c2c2
+}
+
+.hyperlink:hover {
+    color: #21c0ff;
+    transition: all .3s
+}
+
+.view-more-hyperlink,
+.view-more-hyperlink-events {
+    color: #00b7ff;
+    padding-bottom: 4px;
+    margin-top: 50px;
+    font-family: appleLight, sans-serif;
+    font-size: 20px;
+    transform: translate(-50%);
+    transition: all .3s;
+    text-decoration: none
+}
+
+.view-more-hyperlink {
+    position: absolute;
+    left: 50%
+}
+
+.view-more-hyperlink:hover {
+    border-bottom: 1px solid #00b7ff;
+    transition: all .3s
+}
+
+.view-more-hyperlink-events {
+    position: relative
+}
+
+.view-more-hyperlink-events:hover {
+    border-bottom: 1px solid #00b7ff;
+    transition: all .3s
+}
+
+.clear {
+    clear: both;
+    line-height: 0
+}
+
+.contact-section {
+    background-image: #fff;
+    width: 100%
+}
+
+.contact-container {
+    width: 100%;
+    padding: 40px 0
+}
+
+.contact-title {
+    top: 100px;
+    left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+
+.contact-wrapper {
+    max-width: 1080px;
+    width: 100%;
+    min-height: 500px;
+    margin: 20px auto 0;
+    position: relative;
+    padding: 0 30px 120px;
+    box-sizing: border-box;
+    height: 80%;
+    display: flex
+}
+
+.contact-form-holder,
+.info-holder {
+    min-height: 300px;
+    box-sizing: border-box
+}
+
+.info-holder {
+    background: #303030;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 3px 3px 120px rgba(0, 0, 0, .1);
+    padding: 60px 40px
+}
+
+.email-holder,
+.phone-holder {
+    clear: both;
+    padding-top: 30px;
+    display: flex
+}
+
+.address-holder {
+    display: flex
+}
+
+.icon {
+    float: left;
+    width: 10%
+}
+
+.icon img {
+    width: 20px;
+    float: left
+}
+
+.address,
+.email,
+.phone {
+    float: left;
+    width: 90%
+}
+
+.address p,
+.email p,
+.phone p a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .6px;
+    opacity: .8;
+    float: left;
+    margin-top: -8px;
+    margin-left: 20px;
+    margin-bottom: 0
+}
+
+.ip,
+.submit {
+    letter-spacing: 1px
+}
+
+.contact-form-holder {
+    width: 65%;
+    background: #fff;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 1px 1px 120px rgba(0, 0, 0, .2);
+    height: 100%
+}
+
+.contact-form {
+    display: block;
+    padding: 30px;
+    width: auto
+}
+
+.form-title {
+    text-align: left;
+    font-family: gothamLight, sans-serif;
+    font-size: 26px;
+    width: 80%;
+    float: left;
+    box-sizing: border-box
+}
+
+.form-title h4 {
+    margin: 20px
+}
+
+.large-icon {
+    width: 20%;
+    float: left;
+    box-sizing: border-box
+}
+
+.large-icon img {
+    width: 60px
+}
+
+.form-card {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 650px;
+    background-color: #f5f5f5;
+    top: 150px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 120px 0 rgba(168, 167, 167, .479)
+}
+
+.contact-linkedin {
+    width: 40px;
+    height: auto;
+    margin-left: 90px;
+    margin-top: 30px;
+    filter: grayscale(100%);
+    transition: .3s
+}
+
+.contact-linkedin:hover {
+    filter: grayscale(0);
+    box-shadow: 2px 2px 120px 0 rgba(0, 0, 0, .8);
+    transition: .3s
+}
+
+.submit,
+.submit:hover {
+    transition: background .4s
+}
+
+.framed #frame #body {
+    width: 100px!important
+}
+
+input {
+    width: 90%;
+    margin: 20px 0;
+    outline: 0;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid #000
+}
+
+.ip {
+    margin: 10px 30px 0;
+    border-bottom: #ccc 1px solid;
+    font-family: appleBold, sans-serif;
+    padding: 0 0 10px;
+    font-size: 20px
+}
+
+label {
+    clear: both;
+    display: block;
+    margin: 30px 30px 0;
+    font-family: appleMedium, sans-serif;
+    font-size: 14px;
+    color: #d8d8d8
+}
+
+::-webkit-input-placeholder {
+    font-size: 15px;
+    font-family: gothamLight;
+    margin-top: -20px
+}
+
+.submit {
+    display: block;
+    width: 120px;
+    border-radius: 30px;
+    padding: 12px 8px;
+    border: 1px solid #303030;
+    background: #fff;
+    color: #000;
+    font-size: 17px;
+    text-decoration: none;
+    font-family: appleHeavy, sans-serif;
+    margin: 60px 10px 30px 30px;
+    cursor: pointer
+}
+
+.submit:hover {
+    background: #000;
+    color: #fff
+}
+
+button img {
+    width: 26px
+}
+
+.quote-end,
+.quote-start {
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-size: contain
+}
+
+.quote-start {
+    background-image: url(images/quote-start.png);
+    left: 0;
+    margin-left: -40px;
+    margin-top: -20px
+}
+
+.quote-end {
+    background-image: url(images/quote-end.png);
+    right: 0;
+    margin-left: 10px;
+    margin-bottom: -20px
+}
+
+.about-container {
+    box-sizing: border-box;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 40px 0
+}
+
+.about-heading,
+.work-heading {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-family: tallFont, sans-serif;
+    color: #268ed7;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px
+}
+
+.work-heading {
+    color: #000
+}
+
+.about-title,
+.work-title {
+    margin: 10px 0;
+    display: block
+}
+
+.black-headline-button {
+    color: #00b7ff;
+    text-decoration: none;
+    padding-bottom: 4px;
+    font-family: appleLight, sans-serif;
+    font-size: 20px;
+    transition: all .3s;
+    margin-left: 50px;
+    display: inline;
+    cursor: pointer
+}
+
+.black-headline-button:hover {
+    border-bottom: 1px solid #52ceff;
+    transition: all .3s
+}
+
+.work-title {
+    color: #000;
+    margin: 10px auto
+}
+
+.about-description {
+    position: relative;
+    margin: 0 0 20px;
+    text-align: left;
+    display: block;
+    font-family: appleSemibold, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 32px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 50px
+}
+
+.team-wrapper {
+    display: flex;
+    width: auto;
+    padding: 50px 30px
+}
+
+.team-member-name-holder h2,
+.team-member-name-holder p {
+    display: block;
+    font-family: tallFont, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    text-align: center
+}
+
+.team-member-card {
+    width: 33.33%;
+    box-sizing: border-box;
+    height: 450px;
+    background: #4539c2;
+    border-radius: 8px;
+    transition: box-shadow .4s
+}
+
+.team-card-spacing {
+    margin-right: 40px
+}
+
+.team-member-card:hover {
+    box-shadow: 20px 20px 300px rgba(0, 0, 0, .3);
+    transition: box-shadow .4s
+}
+
+.team-member-image {
+    height: 80%;
+    width: auto;
+    background: url(images/team-member.jpg) top;
+    background-size: cover;
+    border-radius: 8px 8px 0 0
+}
+
+.team-member-name-holder {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 20px
+}
+
+.team-member-name-holder h2 {
+    color: #a5b4e5;
+    font-size: 24px;
+    margin-bottom: 8px
+}
+
+.team-member-name-holder p {
+    margin: 0;
+    color: #9892d8;
+    font-size: 16px
+}
+
+footer {
+    background: #0e0e0e;
+    display: flex;
+    padding: 15px 30px;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.footer-first {
+    width: 20%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative
+}
+
+.footer-first img {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%)
+}
+
+.footer-second {
+    width: 60%;
+    box-sizing: border-box;
+    position: relative
+}
+
+.footer-second img {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.footer-first a {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 55%);
+    z-index: 10
+}
+
+.footer-second p {
+    text-align: center;
+    cursor: pointer;
+    color: #21c0ff;
+    font-size: 20px
+}
+
+.footer-third {
+    width: 20%;
+    box-sizing: border-box
+}
+
+.footer-first a,
+.footer-third a {
+    width: 100%;
+    display: block;
+    font-family: appleLight, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 100;
+    color: #63666d;
+    padding-bottom: 10px;
+    transition: all .4s
+}
+
+.footer-third .footer-no-block {
+    display: inline-block
+}
+
+.footer-second a:hover,
+.footer-third a:hover {
+    color: #b9b2b2;
+    transition: all .4s
+}
+
+.footer-third p {
+    display: block;
+    font-family: appleSemibold, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    color: #d7dae0;
+    padding-bottom: 10px;
+    margin-bottom: 0
+}
+
+.footer-anchor {
+    color: #21c0ff;
+    width: 30px;
+    height: 30px
+}
+
+.image,
+canvas {
+    width: 100%!important
+}
+
+.image {
+    height: 450px!important;
+    position: relative;
+    object-fit: cover;
+    border-radius: 6px
+}
+
+canvas {
+    height: auto!important
+}
+
+.owl-thumb-item {
+    width: 32%;
+    background: 0 0;
+    outline: 0;
+    border-radius: 6px;
+    height: 240px;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0;
+    transition: .4s
+}
+
+.owl-thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0
+}
+
+.owl-thumb-item img:focus {
+    opacity: 1
+}
+
+.owl-thumb-item.active img,
+.owl-thumb-item:focus img {
+    box-shadow: 12px 16px 80px rgba(0, 0, 0, .6);
+    transition: .4s
+}
+
+.owl-thumb-item.active {
+    width: 34%
+}
+
+.owl-thumb-item:focus {
+    opacity: 1;
+    width: 34%;
+    height: 240px
+}
+
+.owl-thumbs {
+    position: absolute
+}
+
+.overlay,
+.overlay-form-wrapper {
+    position: fixed;
+    z-index: 10001;
+    transition: all .3s
+}
+
+.project-title {
+    font-family: appleMedium, sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+.project-description {
+    font-family: appleRegular;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #757575;
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+.overlay {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: 0 0;
+    opacity: 0;
+    pointer-events: none
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: all .3s
+}
+
+.overlay-form-wrapper {
+    background: #0e0e0e;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 30px #0002c;
+    max-width: 450px;
+    opacity: 0;
+    pointer-events: none
+}
+
+.overlay-form-wrapper.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: all .3s
+}
+
+.overlay-form-wrapper h4 {
+    font-family: appleBold, sans-serif;
+    text-align: left;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #f0ebeb
+}
+
+.overlay-form-wrapper input[type=email],
+.overlay-form-wrapper input[type=text],
+.overlay-form-wrapper textarea {
+    outline: 0;
+    padding: 20px 16px;
+    border: 1px solid #f0ebeb;
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: #f0ebeb;
+    letter-spacing: 1px;
+    font-size: 16px
+}
+
+.overlay-form-wrapper textarea {
+    margin-top: 20px;
+    background: 0 0;
+    height: 180px;
+    resize: none
+}
+
+.overlay-form-wrapper input[type=email]::placeholder,
+.overlay-form-wrapper input[type=text]::placeholder,
+.overlay-form-wrapper textarea::placeholder {
+    font-family: appleLight, sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #686161
+}
+
+.file-upload-button,
+.overlay-form-wrapper input[type=submit] {
+    outline: 0;
+    padding: 20px 16px;
+    text-transform: uppercase;
+    width: 100%;
+    font-family: appleBold, sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 0;
+    transition: all .3s
+}
+
+.overlay-form-wrapper input[type=submit] {
+    background: #00b7ff;
+    color: #0e0e0e;
+    cursor: pointer;
+    margin-top: 0
+}
+
+.overlay-form-wrapper input[type=submit]:hover {
+    background: #38c7ff;
+    transition: all .3s
+}
+
+.overlay-form-wrapper input[type=submit]:disabled {
+    background: gray;
+    color: #fff;
+    cursor: not-allowed
+}
+
+.overlay-form-wrapper input[type=file] {
+    display: none
+}
+
+.file-upload-button {
+    text-align: center;
+    display: inline-block;
+    background: #1a1919;
+    margin-left: 0;
+    color: #d1cccc;
+    cursor: pointer
+}
+
+.status-text,
+.timeline-date-card p,
+.tooltipText {
+    font-family: appleLight, sans-serif
+}
+
+.file-upload-button:hover {
+    background: #252424;
+    transition: all .3s
+}
+
+.material-circular-progress {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+.form-received .content-container,
+.form-received .img-container {
+    box-sizing: border-box;
+    float: left;
+    display: flex;
+    align-content: center
+}
+
+.status-text {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.form-received {
+    opacity: 0;
+    background: #352e2e!important;
+    box-sizing: border-box;
+    transition: all .3s
+}
+
+.form-received.active {
+    opacity: 1;
+    transition: all .3s
+}
+
+.form-received .img-container {
+    width: 24%;
+    height: 100%;
+    justify-content: center
+}
+
+.form-received .img-container img {
+    width: 100%;
+    height: 100%
+}
+
+.form-received .content-container {
+    width: 76%;
+    padding-left: 20px;
+    justify-content: center
+}
+
+.form-received .content-container h4 {
+    margin-bottom: 0
+}
+
+.tooltip {
+    position: relative
+}
+
+.tooltipText,
+.tooltipText::after {
+    background: #fff;
+    position: absolute
+}
+
+.tooltipText {
+    opacity: 0;
+    right: -300px;
+    top: -20px;
+    width: 200px;
+    text-transform: initial;
+    padding: 20px;
+    color: #000;
+    border-radius: 3px;
+    text-align: left;
+    line-height: 24px;
+    transition: all .3s
+}
+
+.tooltipText::after {
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    left: -5px;
+    top: 50%
+}
+
+.tooltip:hover .tooltipText {
+    opacity: 1;
+    transition: all .3s
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: #cacaca
+}
+
+::-webkit-scrollbar-thumb {
+    background: #adadad
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #868686
+}
+
+.timeline-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: auto;
+    width: 100%
+}
+
+.timeline-container {
+    margin: 0 auto;
+    max-width: 1080px;
+    height: 100%;
+    position: relative
+}
+
+.timeline-container::after {
+    content: ' ';
+    display: block;
+    background: #00b7ff;
+    width: 2px;
+    height: 200px;
+    position: absolute;
+    left: 50px
+}
+
+.last::after {
+    background: 0 0;
+    height: 0
+}
+
+.timeline-card {
+    height: auto;
+    position: relative;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 20px 20px 120px #0000a
+}
+
+.timeline-date-card {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background: #00b7ff;
+    top: -20px;
+    left: 20px;
+    z-index: 20;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 0
+}
+
+.timeline-date-card p {
+    margin: 0;
+    color: #fff
+}
+
+.timeline-content h3,
+.timeline-content-dark h3 {
+    font-family: appleMedium, sans-serif;
+    font-size: 22px
+}
+
+.timeline-header-image-wrapper {
+    height: auto;
+    overflow: hidden
+}
+
+.timeline-content-wrapper {
+    padding: 30px
+}
+
+.timeline-logo-wrapper {
+    width: 400px;
+    height: auto
+}
+
+.timeline-logo-wrapper img {
+    width: 100%;
+    height: auto
+}
+
+.timeline-content p {
+    color: #959595
+}
+
+.timeline-card-dark {
+    height: auto;
+    position: relative;
+    background: #161515;
+    border-radius: 6px;
+    box-shadow: 20px 20px 120px #3a313100;
+}
+
+.timeline-content-dark h3 {
+    color: #fff
+}
+
+.degree_360_button,
+.exit_360_degree {
+    left: 50%;
+    outline: 0;
+    border: 0;
+    padding: 14px 30px;
+    font-family: appleMedium, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 40px #0002d;
+    color : #fff;
+}
+
+.down-mouse {
+    width: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.degree_360_button {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #00b7ff;
+    display: none
+}
+
+.fullContainer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1001;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s
+}
+
+.fullContainer.active {
+    opacity: 1;
+    transition: all .3s;
+    pointer-events: all
+}
+
+.exit_360_degree {
+    position: absolute;
+    transform: translate(-50%);
+    bottom: 2%;
+    background: #161515;
+    border-radius: 60px
+}
+
+.dark em,
+em {
+    font-size: .8em;
+    letter-spacing: .5px
+}
+
+.dark em {
+    color: #fff
+}
+
+em {
+    color: #000
+}
+
+@media screen and (max-width:1280px) {
+    .large-title {
+        font-family: appleBold, sans-serif;
+        font-size: 40px;
+        max-width: 1080px;
+        margin: 0 auto;
+        line-height: 1
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .show-mobile-menu {
+        display: block!important
+    }
+    .description-card {
+        margin-right: 0
+    }
+    .nav-menu {
+        width: 100%;
+        margin-top: 0;
+        display: none
+    }
+    .nav-item {
+        display: block;
+        background: #fff;
+        margin-top: 0;
+        padding: 30px
+    }
+    .nav-item:hover {
+        background: #ebe7e7
+    }
+    .ham-menu {
+        display: inline-block;
+        cursor: pointer
+    }
+    .logo {
+        margin-bottom: 0
+    }
+    .white {
+        background: #fff
+    }
+}
+
+@media screen and (max-width:900px) {
+    .common-project {
+        height: 800px
+    }
+    .contact-wrapper {
+        display: block
+    }
+    .info-holder {
+        width: 100%;
+        border-radius: 8px 8px 0 0
+    }
+    .contact-form-holder {
+        width: 100%;
+        border-radius: 0 0 8px 8px
+    }
+    .owl-thumb-item {
+        height: 120px
+    }
+    .image {
+        border-radius: 0
+    }
+    .hero-title {
+        width: 650px;
+    }
+    .devices-small {
+        width: 32%;
+    }
+    .devices-logo ul {
+        display: flex;
+        justify-content: center;
+        padding-left: 15px;
+    }
+    .devices-logo ul li a img {
+        width: auto;
+        height: 42px;
+        margin-right: 16px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .description-card {
+        float: none;
+        width: auto;
+        border-radius: 0;
+        margin-right: 0
+    }
+    .submit {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 30px 0 0
+    }
+    .common-project {
+        height: 850px
+    }
+}
+
+@media screen and (max-width:700px) {
+    .device {
+        width: 48%
+    }
+    .background {
+        background-size: cover;
+        background-position: right
+    }
+    .hero-title {
+        display: block;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 20px 40px;
+        text-align: center;
+        width: auto
+    }
+    .large-title {
+        font-family: appleBold, sans-serif;
+        font-size: 50px;
+        max-width: 1080px;
+        margin: 0 auto;
+        line-height: 1
+    }
+    .contact-wrapper {
+        padding: 0 30px 60px
+    }
+    .team-wrapper {
+        display: block;
+        padding-top: 20px
+    }
+    .team-member-card {
+        width: 100%;
+        margin-top: 30px
+    }
+    .about-title,
+    .work-title {
+        padding-left: 0;
+        padding-right: 30px
+    }
+    .about-description {
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 24px;
+        line-height: 30px
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center
+    }
+    .footer-first,
+    .footer-second,
+    .footer-third {
+        width: 100%
+    }
+    .footer-second {
+        order: -2;
+        padding-bottom: 30px;
+        height: 100px
+    }
+    img.img-thumb {
+        margin: auto;
+        width: 100%;
+        height: 12vh;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .footer-first img,
+    .owl-thumbs {
+        position: relative
+    }
+    .down-mouse {
+        visibility: visible;
+        opacity: .4
+    }
+    .nav-wrapper {
+        padding: 100px 0
+    }
+    .nav-primary,
+    .nav-secondary {
+        width: 100%
+    }
+    .nav-secondary::before {
+        content: '';
+        border-top: 1px solid #fff;
+        width: 1px;
+        display: block;
+        padding: 0 50px;
+        margin: 20px 50px
+    }
+    .nav-primary ul li,
+    .nav-secondary ul li {
+        padding: 0;
+        margin: 10px
+    }
+    .nav-primary a,
+    .nav-secondary a {
+        font-family: appleBold, sans-serif;
+        font-size: 34px;
+        padding: 0;
+        margin: 0
+    }
+    .nav-secondary img {
+        width: 60px;
+        height: 60px
+    }
+    .device {
+        width: 100%
+    }
+    .devices-section {
+        margin-top: 0;
+        padding-top: 20px;
+        padding-bottom: 20px
+    }
+    .hero-title {
+        padding: 130px 30px 0;
+        font-size: 28px;
+        line-height: 1.4;
+        text-align: center
+    }
+    .description-card {
+        float: none;
+        width: auto;
+        padding: 20px 30px;
+        border-radius: 0;
+        margin-right: 0
+    }
+    .background {
+        background-position: bottom
+    }
+    .research-projects {
+        background-position-x: 74%
+    }
+    .partner-projects {
+        background-position-x: 86%
+    }
+    .event-projects {
+        background-position-x: 3%
+    }
+    .view-more-hyperlink {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin-top: 0;
+        width: 100%;
+        left: 0;
+        transform: translate(0);
+        font-size: 20px;
+        padding: 20px 0
+    }
+    .common-project {
+        margin-top: 0;
+        height: auto
+    }
+    .work-image {
+        height: auto
+    }
+    .image {
+        height: 160px!important
+    }
+    .project-title {
+        font-size: 24px;
+        margin-top: 0;
+        padding-top: 40px;
+        margin-bottom: 10px
+    }
+    .project-description {
+        font-size: 18px;
+        padding: 20px;
+        text-align: left;
+        line-height: 1.3
+    }
+    .owl-thumbs {
+        padding-bottom: 20px
+    }
+    .owl-thumb-item:focus {
+        opacity: 1;
+        width: 34%;
+        height: 120px
+    }
+    .owl-thumb-item.active img,
+    .owl-thumb-item:focus img {
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
+        transition: .4s
+    }
+    .contact-wrapper {
+        padding: 0 20px!important
+    }
+    .device-image-equal,
+    .devices-hero {
+        height: 250px
+    }
+    .about-section,
+    .about-section-wrapper,
+    .devices-small-container,
+    .timeline-header-image-wrapper {
+        height: auto
+    }
+    .devices-small {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px
+    }
+    .device-right-padding {
+        padding-right: 0
+    }
+    .content {
+        opacity: 1!important;
+        font-size: 8px;
+        padding: 4px;
+        width: 120px
+    }
+    .right-content {
+        left: 0!important;
+        border-top-left-radius: 0!important;
+        border-bottom-left-radius: 6px;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-bottom: 0;
+        line-height: 25px
+    }
+    .devices-logo {
+        display: block;
+        height: auto;
+        padding: 40px, 40px 0
+    }
+    .devices-logo ul {
+        display: block;
+        padding-left: 0;
+        margin: 0
+    }
+    .devices-logo ul li {
+        display: block;
+        margin: 0 auto
+    }
+    .devices-logo ul li a {
+        display: flex;
+        padding-bottom: 40px
+    }
+    .devices-logo ul li a img {
+        margin: 0 auto
+    }
+    .footer-first,
+    .footer-second {
+        margin-bottom: 20px
+    }
+    .contact-container {
+        padding-bottom: 0;
+        padding-top: 0
+    }
+    footer {
+        background: #201d1d
+    }
+    .footer-second img {
+        width: 40%
+    }
+    .hero-content {
+        width: 90%
+    }
+    .hero-content h1 {
+        font-size: 30px;
+        padding: 0
+    }
+    .partner-subtitle {
+        font-size: 22px;
+        padding: 10px 20px 20px
+    }
+    .timeline-section {
+        padding: 40px 0
+    }
+    .timeline-card,
+    .timeline-card-dark {
+        border-radius: 0
+    }
+    .timeline-logo-wrapper {
+        width: 100%
+    }
+    .timeline-content h3,
+    .timeline-content-dark h3 {
+        font-size: 24px;
+        margin-top: 20px
+    }
+    .timeline-content p,
+    .timeline-content-dark p {
+        font-size: 14px
+    }
+    .timeline-content a,
+    .timeline-content-dark a {
+        font-size: 16px
+    }
+    .timeline-content-wrapper {
+        padding: 24px
+    }
+    .about-container {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+    .about-description {
+        padding: 0
+    }
+    .black-headline-button {
+        padding: 0;
+        margin-left: 0
+    }
+    .overlay-form-wrapper {
+        width: 100%;
+        box-sizing: border-box
+    }
+    .form-received {
+        width: 90%!important
+    }
+    .degree_360_button {
+        display: block
+    }
+}
+    </style>
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128154563-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128154563-1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M79WSBH');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    <meta name="title" content="Parallax Labs - Industry Level End to End VR | AR | MR solutions">
+    <meta name="description" content="We are enthusiasts, engineers & pragmatists from backgrounds ranging from mechatronics to computer science to user experience design, with the vision to empower the industry with breathtaking immersive technologies">
+    <meta name="keywords" content="ar,vr,mr,mixed reality,virtual reality,augmented reality,immersive solutions,industrial,projection mapping">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Owl Carousel CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon300x300.png">
+    <title>Parallax Labs LLP</title>
+
+    <style type="">
+        .inputTxtError{ border-color: red; } input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; } .dire{ color: rgb(0, 183, 255); text-decoration: none; padding-bottom: 4px; margin-top:
+        1em; text-align: center; font-family: 'appleLight', sans-serif; font-size: 20px; transition: all 0.3s; position: absolute; left: 50%; transform: translate(-50%); transition: all 500ms ease; } a.dire:hover { /* text-decoration: underline; */ transition:
+        all 500ms ease; /* line-height: 15px; */ border-bottom: 1.5px solid rgb(0, 183, 255); } .italic{ font-size: 18px !important; font-style: italic !important; }
+        .humrm{
+            padding-bottom: 155px;
+        }
+        @media (max-width: 767px) {
+            .humrm{
+                padding-bottom: 65px;
+        }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M79WSBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="full-menu">
+    <div class="nav-wrapper">
+        <div class="menu-wrapper">
+            <div class="nav-primary">
+                <ul>
+                    <li>
+                        <a href="index.php" id="nav-home">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.php" id="nav-recent">Recent Work</a>
+                    </li>
+                    <li>
+                        <a href="index.php" id="nav-tech">Technologies</a>
+                    </li>
+                    <li>
+                        <a href="index.php" id="nav-about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="index.php" id="nav-contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-secondary">
+                <ul>
+                    <li>
+                        <a href="events.php">Events</a>
+                    </li>
+                    <li>
+                        <a href="partners.php">Partners</a>
+                    </li>
+                    <li>
+                        <a href="research.php">R&D</a>
+                    </li>
+                    <li>
+                        <a href="training.php">Training</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav>
+    <div class="logo">
+        <a href="/">
+            <img class="logoimg active" src="images/logo1.png" alt="parallax-logo" />
+            <img class="logoimgwhite" src="images/logo1_white.png" alt="parallax-logo" />
+        </a>
+    </div>
+    <div class="ham-menu">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+</nav>
+
+    <div class="background hidden-content" id="div-home">
+        <h1 class="hero-title">We provide end to end solutions in Virtual Reality, Augmented Reality &amp; <br>Mixed Reality.
+        </h1>
+        <!-- <img class="headset" src="images/hero_vr_headset.png" /> -->
+        <img class="down-mouse" src="images/Icons/down_arrow.png" />
+    </div>
+
+
+
+    <div class="work-section hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class=" project2 ">
+                    <h3 class="project-title">Featured - Top Indian Innovators in Global Aerospace - "Trailblazers"
+                        <br><span class="italic">Ministry of Defence, Govt. of India</span></h3>
+                    <p class="project-description">Parallax Labs was adjudged as one of the pioneers in defence technologies under Innovation for Defence Excellence (iDEX) initiative - Ministry of Defence, at the 12th edition of Aero India 2019. Organised by the Defence Exhibition
+                        Organisation, DRDO, Indian Air Force and Ministry of Defence, Aero India is the largest aviation exhibition in Asia where a consortium of world leaders in defence technologies participate to exhibit their latest advancements.
+                    </p>
+                    <div class="work-image">
+                        <img src="images/aero4-min.jpg" class="image" alt="Airside VR" />
+                    </div>
+                    <a href="https://aeroindia.gov.in/site/PDF/TRAILBLAZERS.pdf" target="_blank" class="dire">View
+                        Directory</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="work-section  dark  hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project2">
+                    <h3 class="project-title">Hindustan Unilever Limited - Plant VR Walkthrough</h3>
+                    <p class="project-description">A complete immersive guided walkthrough of Hindustan Unilever's NESA Rhino plant in Doom Dooma, Assam where the user is taken on a journey to witness the value-chain behind the products that touch nine lives out of ten households in
+                        India.
+                    </p>
+                    <div class="work-image">
+                        <div id="owl-demo1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="images/hul/IMG_E7437.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/hul/IMG_E6465.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/hul/IMG_7443.jpg" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-section humrm  hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project2">
+                    <h3 class="project-title">Hindustan Unilever Mixed Reality Maintenance</h3>
+                    <p class="project-description">We have transformed and improved practices at the Hindustan Unilever with Change Over Parts and Autonomous Maintenance using Mixed Reality, at the Rhino Plant at the NESA Plant, Doom Dooma, Assam. Effective and efficient maintenance processes are important elements that support the production control process for most of the manufacture and maintenance process. This shortens the production lead times, helps in achieving higher quality standards. The most significant positive impact of having a small changeover time is the batch size reduction in the production system. The added benefits of the short changeover time includes the expenses reduction, faster production speed, increased output, lead times reduction, smoother flows, a broader range of lot sizes, lower inventory and increased customer satisfaction.
+                    </p>
+                    <div class="work-image">
+                        <div id="owl-demo1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="images/HUL_MR_Maintainence_3.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/HUL_MR_Maintainence_2.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/HUL_MR_Maintainence.jpg" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="work-section  dark  hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project2">
+                    <h3 class="project-title">VAPP</h3>
+                    <p class="project-description">V-app, one of the largest smart communications and engagement platforms empowers real estate with super powers of technology and intelligence, Parallax has proudly developed solutions to help V-app in it’s quest for making marketing tools smarter, more powerful and more elegant via augmented reality.
+                    </p>
+                    <div class="work-image">
+                        <div id="owl-demo1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="images/VAPP_1.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/VAPP_2.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/VAPP_1.jpg" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-section hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project2">
+                    <h3 class="project-title">Atlas Copco AR Machine Viz</h3>
+                    <p class="project-description">A hyper-realistic augmented reality powered global launch of their flagship products, where each machine is virtualised in its real life and scale. The user interacts with each of them, to get the real feel of handling and interacting with the machine. Use ARKit / ARCore enabled phones to have a quick Augmented Reality view of the machines.</p>
+                    <div class="work-image">
+                        <model-viewer id="model_view" ar src="https://parallax-labs-website.s3.ap-south-1.amazonaws.com/model2/scene+(1).glb" alt="3D model of Chirpy Cups" ios-src="./scene.usdz" auto-rotate camera-controls background-color="#fff">
+                        </model-viewer>
+                        <button id="change_src1" class="btn-thumb"><img src="models/Atlas 1.png " class="img-thumb" /></button>
+                        <button id="change_src" class="btn-thumb"><img src="models/thumb.PNG " class="img-thumb" /></button>
+                        <button id="change_src2" class="btn-thumb"><img src="models/thumb3.PNG" class="img-thumb" /></button> -->
+                        <div id="owl-demo5" class="owl-carousel owl-theme owl-model">
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <model-viewer id="model_view" ar src="https://parallax-labs-website.s3.ap-south-1.amazonaws.com/model2/scene+(1).glb" alt="Atlas Copco Air Compressor" ios-src="https://parallax-labs-website.s3.ap-south-1.amazonaws.com/model2/atlas_copco_air_compressor.usdz" auto-rotate camera-controls background-color="#fff" poster="models/Atlas 1.png">
+                                    </model-viewer>
+                                    <img src="./models/Atlas 1.png" style="display:none;height: 450px !important;">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="./images/bhushion machine_01.jpg" class="image" style="height: 450px !important;" />
+                            </div>
+                            <div class="item">
+                                <img src="./images/bm_04.jpg" class="image" style="height: 450px !important;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-section dark hidden-content" id="div-work">
+        <div class="work-container ">
+            <div class="projects">
+                <div class="common-project project1">
+                    <h3 class="project-title">Aditya Birla HR Induction</h3>
+                    <p class="project-description">Branded as ‘The Big in Your Life Challenge’, it is an immersive, interactive &amp; gamified room-scale VR experience developed to replace the traditional PPT based HR induction at Aditya Birla Group. Highlighting the inevitable presence
+                        of all their businesses in our daily life with realistic graphics, gripping storyline &amp; an amicable virtual assistant, the experience makes sure the induction is done the way it has never been done before.</p>
+                    <div class="work-image">
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <img src="./images/Induction/induction_1.jpg" class="image" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="./images/Induction/induction_2.JPG" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="./images/Induction/induction_3.JPG" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="work-section hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project2">
+                    <h3 class="project-title">Hindalco Plant VR Walkthrough</h3>
+                    <p class="project-description">A 360<sup>o</sup> stereoscopic, interactive plant walkthrough of the Taloja Flat Rolled Products plant near Mumbai covering the complete sheet manufacturing process, its KPIs and navigation to more than 100 points of interest. Also,
+                        features the hub of all the VR content of Aditya Birla’s Hindalco Industries, including the videos embracing Hindalco’s legacy, other plants in India & the full range of aluminium products.
+                    </p>
+                    <div class="work-image">
+                        <div id="owl-demo1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="images/Hindalco/hindalco_1.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/Hindalco/hindalco_2.JPG" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/Hindalco/hindalco_3.JPG" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-section dark hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project3">
+                    <h3 class="project-title">Elmach Blister Next MR</h3>
+                    <p class="project-description">Elmach has brought a revolution in the pharma industry by being the first pharma packaging company in the world to have MR as a full time work environment solution. From ordering spare parts for their machines to monitoring real-time
+                        data, Elmach has partnered with Parallax Labs to provide it's clients with a state-of-the-art technology to resolve the industry 4.0 problems.</p>
+                    <div class="work-image">
+                        <div id="owl-demo1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="images/Elmach/elmach1.png" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/Elmach/elmach_2.JPG" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/Elmach/elmach_3.jpg" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-section hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project3 last-project">
+                    <h3 class="project-title">ISRO SAC Planet Terrain VR</h3>
+                    <p class="project-description">A VR tool to input any satellite elevation model of any resolution to generate 3D terrain with textures and vector data in real-time to collaborate and analyse the planetary data. The software uses our algorithms based on months of
+                        research to generate the terrain and teleport the user at the right location in VR. The tool currently features measuring the distance between two findings, textual &amp; voice annotations, altitude measurements & VR 2D capture.</p>
+                    <div class="work-image">
+                        <div id="owl-demo1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="images/ISRO Terrain Visualizer/isro_mars.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/ISRO Terrain Visualizer/isro_2.png" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/ISRO Terrain Visualizer/isro_3.png" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-section dark hidden-content">
+        <div class="work-container">
+            <div class="projects">
+                <div class="common-project project3">
+                    <h3 class="project-title">ISRO VSSE VR</h3>
+                    <p class="project-description">We’ve setup a galactic VR experience at the Indian Space Research Organisation’s Vikram Sarabhai Space Exhibition in Ahmedabad, where everyday nearly 250 to 300 children from nearby schools go on a virtual field trip amongst the planets
+                        of our solar system, witness the Moon Impact Probe mission led by APJ Abdul Kalam from a first person perspective, and journey to the surface of Mars.</p>
+                    <div class="work-image">
+                        <div id="owl-demo1" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="images/ISRO VSSE VR/isro_experience_1.jpg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/ISRO VSSE VR/isro_experience_2.jpeg" class="image" />
+                            </div>
+                            <div class="item">
+                                <img src="images/ISRO VSSE VR/isro_experience_3.jpeg" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="devices-section hidden-content" id="div-tech">
+        <div class="devices-container">
+            <div class="devices-wrapper">
+
+                <div class="devices-hero">
+                    <a href="https://www.vive.com/in/product/vive-pro/" target="_blank">
+                        <div class="device-image-equal device-vive-pro"></div>
+                        <h4 class="content">Vive Pro</h4>
+                    </a>
+                </div>
+
+                <div class="devices-small-container">
+                    <a href="https://www.vive.com/in" target="_blank" class="devices-small device-right-padding">
+                        <div class="device-image-equal device-vive"></div>
+                        <h4 class="content">Vive</h4>
+                    </a>
+                    <a href="https://www.oculus.com/go/" target="_blank" class="devices-small device-right-padding">
+                        <div class="device-image-equal device-oculus-go"></div>
+                        <h4 class="content">Oculus GO</h4>
+                    </a>
+                    <a href="https://www.oculus.com/rift/" target="_blank" class="devices-small">
+                        <div class="device-image-equal device-oculus-rift"></div>
+                        <h4 class="content">Oculus Rift</h4>
+                    </a>
+                </div>
+
+                <div class="devices-hero">
+                    <a href="https://www.microsoft.com/en-us/hololens" target="_blank">
+                        <div class="device-image-equal device-hololens"></div>
+                        <h4 class="content right-content">Microsoft Hololens</h4>
+                    </a>
+                </div>
+
+                <div class="devices-logo">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/Devices/unity_logo.png" alt="Unity Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/Devices/unreal_logo.png" alt="Unreal Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/Devices/arcore_logo.png" alt="Arcore Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/Devices/arkit_logo.png" alt="ARKit Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/Devices/vuforia_logo.png" alt="Vuforia Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section" id="div-about">
+        <div class="about-section-wrapper">
+            <div class="about-container">
+                <p class="about-description">We are enthusiasts, engineers & pragmatists from backgrounds ranging from mechatronics to computer science to user experience design, with the vision to empower the industry with breathtaking immersive technologies. <br>Come, be a part
+                    of our story.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-section hidden-content" id="div-contact">
+        <div class="contact-container">
+            <div class="contact-wrapper">
+                <div class="info-holder">
+                    <div class="address-holder">
+                        <div class="icon">
+                            <img src="images/Icons/pin.svg" alt="Pin Icon" />
+                        </div>
+                        <div class="address">
+                            <p>128/129
+                                <br>B5 Shramjeevan
+                                <br>Wadala Truck Terminal
+                                <br>Mumbai, India</p>
+                        </div>
+                    </div><br>
+                     <div class="address-holder">
+                            <div class="icon">
+                                <img src="images/Icons/pin.svg" alt="Pin Icon" />
+                            </div>
+                            <div class="address">
+                                <p>The Hive Burton Street
+                                <br>Nottingham, UK
+                                <br>NG1 5LT</p>
+                            </div>
+                        </div> 
+                    <div class="phone-holder">
+                        <div class="icon">
+                            <img src="images/Icons/phone-call.svg" alt="Pin Icon" />
+                        </div>
+                        <div class="phone">
+                            <p style=" margin-top: 0; "><a href="tel:+919930458278">+91 99304 58278</a>
+                                <br><a href="tel:+917719937890">+91 77199 37890</a>
+                                <br></p>
+                        </div>
+                    </div>
+                    <div class="email-holder">
+                        <div class="icon">
+                            <img src="images/Icons/letter.svg" alt="Email Icon" />
+                        </div>
+                        <div class="email">
+                            <p>info@parallax.co.in</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/company/parallax-labs/" target="_blank">
+                            <img class="contact-linkedin" src="images/linkedin_icon.png" />
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-holder">
+                    <div class="contact-form">
+                        <div class="form-title">
+                            <h4>Get in touch with us</h4>
+                             <form action="" method="POST" name="contact_form" id="cnct-form">
+
+                                <label>Full Name</label>
+                                <input class="ip" type="name" name="name" id="name">
+                                <label>Email Address</label>
+                                <input class="ip" type="email" name="email" id="email">
+                                <label>Mobile Number</label>
+                                <input class="ip" type="number" name="phone" id="phone">
+                                <label>Message</label>
+                                <input class="ip" type="text" name="message" id="message">
+
+                                <button type="button" id="cnct-btn" class="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <br class="clear" />
+                </div>
+            </div>
+        </div>
+
+        <footer class="hidden-content">
+        <div class="footer-first">
+            <img src="images/Startindia.png" alt="Startup India Logo" />
+            <p>Recognition No.: DIPP24671</p>
+        </div>
+        <div class="footer-second">
+        </div>
+        <div class="footer-third">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &#38 Conditions</a>
+        </div>
+    </footer> -->
+
+        <footer class="hidden-content">
+    <div class="footer-first">
+        <img src="images/Startindia.png" alt="Startup India Logo" />
+        <a href="#">Recognition No.: DIPP24671</a>
+    </div>
+    <div class="footer-second">
+        <img src="images/make_in_india_logo.png" alt="Startup India Logo" />
+    </div>
+    <div class="footer-third">
+        <p>Quick Links</p>
+        <a href="https://parallax.co.in/privacy.php" class="footer-no-block">Privacy Policy</a>
+        <a href="https://parallax.co.in/terms.php" class="footer-no-block footer-left-space">Terms &#38 Conditions</a>
+    </div>
+</footer>
+
+        <!-- Loading jQuery and custom Javascript library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <!--Owl Carousel JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="js/owl.carousel2.thumbs.min.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+          <!--SweetAlert Script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+        <script>
+            $("#change_src").click(function() {
+                    $("#model_view").attr("src", "https://parallax-labs-website.s3.ap-south-1.amazonaws.com/model1/model.gltf"),
+                        console.log("done");
+                }),
+                $("#change_src1").click(function() {
+                    $("#model_view").attr("src", "./images/bhushion machine_01.jpg"),
+                        console.log("done");
+                }),
+                $("#change_src2").click(function() {
+                    $("#model_view").attr("src", "./images/bm_04.jpg"),
+                        console.log("done");
+                });
+        </script> 
+        <script>
+            $(document).ready(function() {
+                $('.owl-model').owlCarousel({
+                    thumbs: true,
+                    thumbsPrerendered: true
+                });
+            });
+        </script>
+
+</body>
+
+</html>

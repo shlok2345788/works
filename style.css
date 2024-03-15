@@ -1,0 +1,36 @@
+*,*:before, *:after {
+    box-sizing:border-box;
+    -webkit-font-smooting:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+body{
+    font-size: 12px;
+}
+body,button,input {
+    font-family- 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing:1.4px;
+}
+.background{
+    display: flex;
+    min-height: 100vh;
+
+}
+.container{
+    flex: 0 1 700px;
+    margin:auto;
+    padding:10px;
+}
+.screen
+{
+    postion:relative;
+    background:#3e3e3e;
+    border-radius: 15px;
+}
+.screen:after{
+    content:'';
+    display: block;
+    postion:absolute;
+    top:0;
+    left: 20px;
+}

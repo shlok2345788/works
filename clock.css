@@ -1,0 +1,40 @@
+body{
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+}
+.stopwatch{
+    text-align: center;
+
+}
+.display{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.controls{
+    justify-content: space-between;
+    display: flex;
+
+}
+.controls button{
+    padding :10px 20 px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#start{
+    background-color: green;
+    color:white;
+}
+#pause{
+    background-color: grey;
+    color:white;
+}
+#reset{
+    background-color: red;
+    color:white;
+}
